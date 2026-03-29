@@ -60,7 +60,7 @@ def main():
             cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.6, (255, 255, 255), 1)
             
         # Display the resulting image
-        cv2.imshow('AI Attendance System', frame)
+        # cv2.imshow('AI Attendance System', frame)
         
         # Hit 'q' on the keyboard to quit!
         if cv2.waitKey(1) & 0xFF == ord('q'):
