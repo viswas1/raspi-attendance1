@@ -20,3 +20,8 @@ PROCESS_ALTERNATE_FRAMES = True  # Process every Nth frame
 FRAME_SKIP = 2  # Skip every N frames
 FACE_SIZE = (100, 100)  # Size to resize cropped face for encoding
 MAX_FACES_PER_FRAME = 2  # Limit number of faces processed
+
+# Networking Settings
+STREAM_HOST = "0.0.0.0"
+STREAM_PORT = 8000
+PI_IP_ADDRESS = "localhost"  # Change to your Pi's IP when running on laptop
