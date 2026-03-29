@@ -1,0 +1,7 @@
+opencv-python
+face_recognition
+numpy
+pandas
+streamlit
+cmake
+setuptools<70
