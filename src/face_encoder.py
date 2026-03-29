@@ -22,12 +22,8 @@ def extract_features(face_roi):
     face_resized = cv2.resize(face_roi, config.FACE_SIZE)
     face_gray = cv2.cvtColor(face_resized, cv2.COLOR_BGR2GRAY)
     
-    # Noise Reduction (Bilateral Filter)
-    # This preserves edges (essential for HOG) while smoothing sensor noise
-    face_denoised = cv2.bilateralFilter(face_gray, d=5, sigmaColor=75, sigmaSpace=75)
-    
     # Lighting Normalization: Histogram Equalization
-    face_equ = cv2.equalizeHist(face_denoised)
+    face_equ = cv2.equalizeHist(face_gray)
     
     # Feature Extraction: HOG
     hog = get_hog_descriptor()
